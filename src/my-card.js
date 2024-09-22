@@ -10,7 +10,7 @@ export class MyCard extends LitElement {
     super();
     this.title = "My card";
     this.description = "My Description";
-    this.image = "https://btopro.com/files/IMG_20190729_213158.jpg";
+    this.image = "https://wallpaperaccess.com/full/3023222.jpg";
   }
 
   static get styles() {
@@ -104,7 +104,7 @@ export class MyCard extends LitElement {
         <a href="https://google.com">
           <button>This is a link to google</button>
         </a>
-        <button class="duplicate" id="dup">Duplicate this card</button>
+        <button class="duplicate">Duplicate this card</button>
         <button class="rename">Rename this card</button>
         <button class="reimage">Change image on this card</button>
         <button class="recolor">Change color on this card</button>
