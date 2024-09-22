@@ -1,6 +1,7 @@
 
 document.querySelectorAll('.duplicate').forEach(function(button) {
     button.addEventListener('click', function(event) {
+        console.log("dup");
       const cardToDuplicate = event.target.closest('.card');
       const newCard = cardToDuplicate.cloneNode(true);
       const container = document.querySelector('.container');

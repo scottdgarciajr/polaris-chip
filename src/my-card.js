@@ -104,10 +104,10 @@ export class MyCard extends LitElement {
         <a href="https://google.com">
           <button>This is a link to google</button>
         </a>
-        <button class="duplicate">Duplicate this card</button>
-        <button class="rename">Rename this card</button>
-        <button class="reimage">Change image on this card</button>
-        <button class="recolor">Change color on this card</button>
+        <button class="duplicate" @click="${this._duplicateCard}">Duplicate/button>
+        <button class="rename" @click="${this._renameCard}">Rename</button>
+        <button class="reimage" @click="${this._reimageCard}">Change</button>
+        <button class="recolor" @click="${this._recolorCard}">Change</button>
         <button class="details-button">Details</button>
       </div>
     `;
@@ -117,10 +117,33 @@ export class MyCard extends LitElement {
     return {
       title: { type: String },
       description: { type: String },
-      image: { type: String },
+      image: { type: String }
     };
+  }
+  _duplicateCard(event) {
+    const cardToDuplicate = event.target.closest('.card');
+    const newCard = cardToDuplicate.cloneNode(true);
+    const container = this.closest('.container');
+    if (container) {
+      container.appendChild(newCard);
+    }
+  }
+  _renameCard(event) {
+    const cardToTarget = event.target.closest('.card');
+    const title = cardToTarget.querySelector('.title');
+    title.innerHTML = "New Name";
+  }
+
+  _reimageCard(event) {
+    const cardToTarget = event.target.closest('.card');
+    const memeImage = cardToTarget.querySelector('meme-maker'); 
+    memeImage.setAttribute('image-url', "https://www.pngmart.com/files/11/Doge-Meme-PNG-File.png");
+  }
+
+  _recolorCard(event) {
+    const cardToTarget = event.target.closest('.card');
+    cardToTarget.classList.toggle('fancy');
   }
 }
 
 customElements.define(MyCard.tag, MyCard);
-
