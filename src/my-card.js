@@ -100,7 +100,7 @@ export class MyCard extends LitElement {
           bottom-text="is getting an A"
           class="card-image"
         ></meme-maker>
-        <p>${this.description}</p>
+        <p><slot name="description">${this.description}</slot>></p>
         <a href="https://google.com">
           <button>This is a link to google</button>
         </a>
