@@ -33,10 +33,11 @@ export class MyCard extends LitElement {
         margin: 20px;
         border-radius: 20px;
         opacity: .7;
+        background-color: var(--card_color);
       }
 
       .fancy {
-        background-color: coral;
+        background-color: var(--fancy_color);
       }
 
       .card:hover,
