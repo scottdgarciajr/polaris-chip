@@ -38,6 +38,8 @@ export class MyCard extends LitElement {
 
       .fancy {
         background-color: var(--fancy_color);
+        border: 2px solid fuchsia;
+        box-shadow: 10px 5px 5px red;
       }
 
       .card:hover,
@@ -101,7 +103,12 @@ export class MyCard extends LitElement {
           bottom-text="is getting an A"
           class="card-image"
         ></meme-maker>
-        <p><slot name="description">${this.description}</slot>></p>
+        <details ?open="${this.fancy}" @toggle="${this._toggleFancy}">
+          <summary>Description</summary>
+          <div>
+            <slot name="description">${this.description}</slot>
+          </div>
+        </details>
         <a href="https://google.com">
           <button>This is a link to google</button>
         </a>
