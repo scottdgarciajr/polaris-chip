@@ -103,7 +103,7 @@ export class MyCard extends LitElement {
           bottom-text="is getting an A"
           class="card-image"
         ></meme-maker>
-        <details ?open="${this.fancy}" @toggle="${this._toggleFancy}">
+        <details ?open="${this.fancy}" @toggle="${this._recolorCard}">
           <summary>Description</summary>
           <div>
             <slot name="description">${this.description}</slot>
@@ -114,8 +114,8 @@ export class MyCard extends LitElement {
         </a>
         <button class="duplicate" @click="${this._duplicateCard}">Duplicate/button>
         <button class="rename" @click="${this._renameCard}">Rename</button>
-        <button class="reimage" @click="${this._reimageCard}">Change</button>
-        <button class="recolor" @click="${this._recolorCard}">Change</button>
+        <button class="reimage" @click="${this._reimageCard}">Change Image</button>
+        <button class="recolor" @click="${this._recolorCard}">Change Color</button>
         <button class="details-button">Details</button>
       </div>
     `;
