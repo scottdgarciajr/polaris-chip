@@ -24,28 +24,23 @@
 </head>
 
 <body>
-  <h1>polaris-chip</h1>
-  <!-- this is going to do whatever the tag's defaults are -->
-  <polaris-chip title="News of Record" link="https://psu.edu/" shiny=></polaris-chip>
-  <polaris-chip title="Faculty and Staff"></polaris-chip>
-  <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
-  <polaris-chip title="Grants and donations"></polaris-chip>
-
   <h1>my-card</h1>
   <div class="container">
-  <my-card description = "this is my description">
-    <h3>cool stuff</h3>>
-    <div slot = "description"><true-false-question question="HAX is a game changer.">
-  <input type="checkbox" value="True" correct="correct" role="textbox">
-  <input type="checkbox" value="False">
-</true-false-question>
+    <my-card description="this is my description">
+      <h3>cool stuff</h3>
+      <div slot="description">
+        <true-false-question question="HAX is a game changer.">
+          <input type="checkbox" value="True" correct="correct" role="textbox">
+          <input type="checkbox" value="False">
+        </true-false-question>
+      </div>
+    </my-card>
 
-<div>
-  </my-card>
-  <my-card description = "this is my description"></my-card>
-  <my-card></my-card>
-  <my-card></my-card>
+    <my-card description="this is my description"></my-card>
+    <my-card></my-card>
+    <my-card></my-card>
   </div>
+
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>

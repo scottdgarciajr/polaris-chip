@@ -24,7 +24,7 @@ export class MyCard extends LitElement {
         --meme-maker-font-size-medium: 24px;
         --meme-maker-font-size-small: 16px;
         width: 200px;
-        flex-basis: 200px;
+        display: flex;
       }
 
       .card {
