@@ -35,7 +35,12 @@
   <div class="container">
   <my-card description = "this is my description">
     <h3>cool stuff</h3>>
-    <p slot ="description"><b>Bolded Description<b></p>
+    <div slot = "description"><true-false-question question="HAX is a game changer.">
+  <input type="checkbox" value="True" correct="correct" role="textbox">
+  <input type="checkbox" value="False">
+</true-false-question>
+
+<div>
   </my-card>
   <my-card description = "this is my description"></my-card>
   <my-card></my-card>
@@ -47,6 +52,7 @@
   <script type="module" src="./src/my-card.js"></script>
   <script type="module" src="./src/meme-maker.js"></script>
   <script type="module" src="./src/card-button-scripts.js"></script>
+  <script type="module" src="https://cdn.hax.cloud/cdn/build/es6/node_modules/@haxtheweb/multiple-choice/lib/true-false-question.js"></script>
   <link rel="stylesheet" href="global.css">
 </body>
 

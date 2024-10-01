@@ -24,6 +24,7 @@ export class MyCard extends LitElement {
         --meme-maker-font-size-medium: 24px;
         --meme-maker-font-size-small: 16px;
         width: 200px;
+        flex-basis: 200px;
       }
 
       .card {
@@ -103,7 +104,7 @@ export class MyCard extends LitElement {
           bottom-text="is getting an A"
           class="card-image"
         ></meme-maker>
-        <details ?open="${this.fancy}" @toggle="${this._recolorCard}">
+        <details @toggle="${this._recolorCard}">
           <summary>Description</summary>
           <div>
             <slot name="description">${this.description}</slot>
